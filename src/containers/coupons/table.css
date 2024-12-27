@@ -1,0 +1,40 @@
+.dropdown-container {
+    border: 1px solid #aaa; /* Outer border for the dropdown */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding for dropdown content */
+    width: 300px; /* Increase the width of the dropdown */
+    background-color: white; /* Background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.option-group {
+    border: 1px solid #ddd; /* Individual option group border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between groups */
+    padding: 10px; /* Padding within groups */
+}
+
+.reset-button {
+    background-color: #ffcccc; /* Light red background for reset button */
+    border: none; /* No border */
+    color: red; /* Text color */
+    padding: 8px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position in the top right */
+    right: 10px; /* Distance from the right */
+    top: 10px; /* Distance from the top */
+    font-weight: bold; /* Bold text */
+}
+
+.reset-button:hover {
+    background-color: #ff9999; /* Darker red on hover */
+}
+
+/* Optional: Styles for suboptions if needed */
+.suboption {
+    border: 1px solid #ddd; /* Border for suboptions */
+    border-radius: 5px; /* Rounded corners for suboptions */
+    padding: 5px; /* Padding for suboptions */
+    margin-top: 5px; /* Space above suboptions */
+}

@@ -1,0 +1,247 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.c-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    /* Use percentage for responsiveness */
+    max-width: 800px;
+    /* Maintain a wide layout on larger screens */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    /* Allow scrolling if content overflows */
+    margin-top: 30px !important;
+    /* Slide down the modal */
+}
+
+.c-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.c-modal-body {
+    display: flex;
+    /* Flexbox for two-column layout */
+    margin-top: 15px;
+    flex-wrap: wrap;
+    /* Enable wrapping for small screens */
+}
+
+.bordered-container {
+    border: 1px solid rgba(235, 227, 227, 0.486);
+    /* Unified border color */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 0;
+    /* No padding to ensure flush alignment */
+    display: flex;
+    /* Maintain the column layout */
+    flex: 1;
+    /* Maintain equal sizing */
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    /* Takes up half the available space */
+    min-width: 250px;
+    /* Minimum width for responsiveness */
+}
+
+.customer-name {
+    overflow: hidden;
+    /* padding: 15px; Padding for the name section */
+    /* border-radius: 5px 0 0 5px; */
+    border-top-left-radius: 20px;
+    /* Slightly rounded top corners */
+    text-align: left !important;
+    /* Left align the text */
+}
+
+.customer-info {
+    margin: 10px 15px;
+    /* Add margin for content */
+}
+
+.modal-actions {
+    margin: 15px;
+    /* Add margin for button spacing */
+    display: flex;
+    flex-direction: column;
+    /* Stack buttons vertically */
+}
+
+.action-button {
+
+    background-color: white !important;
+    /* Light background color for buttons */
+    border: 1px solid #0DAC8A !important;
+    /* Green border */
+    color: #0DAC8A !important;
+    /* Button text color */
+    border-radius: 12px !important;
+    padding: 10px !important;
+    margin: 5px 0 !important;
+    /* Vertical spacing between buttons */
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.3s, transform 0.2s !important;
+    /* Smooth transitions */
+}
+
+.action-button:hover {
+    background-color: #e0f7fa !important;
+    /* Change background on hover */
+    transform: scale(1.05) !important;
+    /* Slightly grow button */
+}
+
+.delete-button {
+    background-color: white !important;
+    /* Light red background */
+    border: 1px solid #F5430B !important;
+    border-radius: 12px !important;
+    /* Red border */
+    color: #F5430B !important;
+    /* Button text color */
+    transition: background-color 0.3s, transform 0.2s !important;
+    padding: 10px !important;
+    margin: 5px 0 !important;
+    /* Smooth transitions */
+}
+
+.delete-button:hover {
+    background-color: #ff9999 !important;
+    /* Darker red on hover */
+    transform: scale(1.05) !important;
+    /* Slightly grow button */
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-item {
+    margin: 5px 0;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    width: 416px;
+    height: 24px;
+    /* Use flexbox for alignment */
+    justify-content: space-between;
+    /* Space out text and icon */
+    align-items: center;
+    /* Center-align items */
+}
+
+.coupons,
+.suggestions,
+.reason,
+.notes {
+    font-weight: 500;
+    line-height: 19.36px;
+    size: 16px;
+    color: black;
+}
+
+.customer-details {
+    margin-top: 20px;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 900px) {
+    .modal-content {
+        width: 95%;
+        /* Slightly smaller width for medium screens */
+    }
+
+    .modal-body {
+        flex-direction: column;
+        /* Stack columns on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-header h2 {
+        font-size: 18px;
+        /* Smaller font size for headers */
+    }
+
+    .modal-header h3 {
+        font-size: 16px;
+        /* Smaller font name */
+    }
+
+    .action-button,
+    .delete-button {
+        padding: 8px;
+        /* Smaller button padding */
+        font-size: 14px;
+        /* Smaller font size for buttons */
+    }
+
+    .close-button {
+        font-size: 18px;
+        /* Smaller close button size */
+    }
+
+    .left-column,
+    .right-column {
+        min-width: 100%;
+        /* Full width on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-header h2 {
+        font-size: 16px;
+        /* Even smaller font size for headers */
+    }
+
+    .modal-header h3 {
+        font-size: 14px;
+        /* Smaller font name */
+    }
+
+    .action-button,
+    .delete-button {
+        padding: 6px;
+        /* Smaller button padding */
+        font-size: 12px;
+        /* Smaller font size for buttons */
+    }
+
+    .close-button {
+        font-size: 16px;
+        /* Smaller close button size */
+    }
+}

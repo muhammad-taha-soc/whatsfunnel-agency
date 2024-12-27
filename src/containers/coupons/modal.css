@@ -1,0 +1,435 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 40%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 9% !important; */
+    max-height: 99vh;
+}
+
+.overviewmodal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 35%;
+    /* Use percentage for responsiveness */
+    max-width: 800px;
+    /* Maintain a wide layout on larger screens */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* Slide down the modal */
+    max-height: 99vh;
+}
+
+.create-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    /* width: 35%; */
+    /* Use percentage for responsiveness */
+    max-width: 800px;
+    /* Maintain a wide layout on larger screens */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* Slide down the modal */
+    max-height: 99vh;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 0px !important;
+}
+
+.modal-body {
+    display: flex;
+    /* Flexbox for two-column layout */
+
+    flex-wrap: wrap;
+    /* Enable wrapping for small screens */
+}
+
+.bordered-container {
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 0;
+    /* No padding to ensure flush alignment */
+    display: flex;
+    /* Maintain the column layout */
+    flex: 1;
+    /* Maintain equal sizing */
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    /* Takes up half the available space */
+    min-width: 250px;
+    /* Minimum width for responsiveness */
+}
+
+.customer-name {
+    padding: 5px;
+    /* Padding for the name section */
+    border-radius: 5px 5px 0 0;
+    /* Slightly rounded top corners */
+    text-align: left !important;
+    /* Left align the text */
+}
+
+.customer-info {
+    margin: 10px 15px;
+    /* Add margin for content */
+}
+
+.modal-actions {
+    margin: 15px;
+    /* Add margin for button spacing */
+    display: flex;
+    flex-direction: column;
+    /* Stack buttons vertically */
+}
+
+.action-button {
+
+    background-color: white !important;
+    /* Light background color for buttons */
+    border: 1px solid #0DAC8A !important;
+    /* Green border */
+    color: #0DAC8A !important;
+    /* Button text color */
+    border-radius: 12px !important;
+    padding: 10px !important;
+    margin: 5px 0 !important;
+    /* Vertical spacing between buttons */
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.3s, transform 0.2s !important;
+    /* Smooth transitions */
+}
+
+.action-button:hover {
+    background-color: #e0f7fa !important;
+    /* Change background on hover */
+    transform: scale(1.05) !important;
+    /* Slightly grow button */
+}
+
+.delete-button {
+    background-color: white !important;
+    /* Light red background */
+    border: 1px solid #F5430B !important;
+    border-radius: 12px !important;
+    /* Red border */
+    color: #F5430B !important;
+    /* Button text color */
+    transition: background-color 0.3s, transform 0.2s !important;
+    padding: 10px !important;
+    margin: 5px 0 !important;
+    /* Smooth transitions */
+}
+
+.delete-button:hover {
+    background-color: #ff9999 !important;
+    /* Darker red on hover */
+    transform: scale(1.05) !important;
+    /* Slightly grow button */
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-item {
+    margin: 5px 0;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: space-between;
+    /* Space out text and icon */
+    align-items: center;
+    /* Center-align items */
+}
+
+.coupons,
+.suggestions,
+.reason,
+.notes {
+    color: black;
+}
+
+.customer-details {
+    margin-top: 20px;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 900px) {
+    .modal-content {
+        width: 95%;
+        /* Slightly smaller width for medium screens */
+    }
+
+    .modal-body {
+        flex-direction: column;
+        /* Stack columns on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-header h2 {
+        font-size: 18px;
+        /* Smaller font size for headers */
+    }
+
+    .modal-header h3 {
+        font-size: 16px;
+        /* Smaller font name */
+    }
+
+    .action-button,
+    .delete-button {
+        padding: 8px;
+        /* Smaller button padding */
+        font-size: 14px;
+        /* Smaller font size for buttons */
+    }
+
+    .close-button {
+        font-size: 18px;
+        /* Smaller close button size */
+    }
+
+    .left-column,
+    .right-column {
+        min-width: 100%;
+        /* Full width on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-header h2 {
+        font-size: 16px;
+        /* Even smaller font size for headers */
+    }
+
+    .modal-header h3 {
+        font-size: 14px;
+        /* Smaller font name */
+    }
+
+    .action-button,
+    .delete-button {
+        padding: 6px;
+        /* Smaller button padding */
+        font-size: 12px;
+        /* Smaller font size for buttons */
+    }
+
+    .close-button {
+        font-size: 16px;
+        /* Smaller close button size */
+    }
+}
+
+
+.iconsminds-upload {
+    color: #0DAC8A;
+
+}
+
+.avatar-container {
+    display: flex;
+    /* Use flexbox for layout */
+    position: relative;
+    /* Positioning context for child elements */
+    margin-bottom: 20px;
+    /* Add margin around the container */
+}
+
+.avatar-box {
+    width: 64px;
+    /* Width of the avatar box */
+    height: 64px;
+    /* Height of the avatar box */
+    border-radius: 13.33px;
+    /* Radius applied to all four corners */
+    border: 1.33px solid #EEEEEE;
+    /* Light gray border */
+    opacity: 1;
+    /* Fully visible */
+    background: #FFFFFF;
+    /* White background */
+    display: flex;
+    /* To center any content inside */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+}
+
+.upload-icon {
+    margin-top: 10px;
+
+    font-size: 15px;
+
+    padding: 4px;
+}
+
+.flex-container {
+    display: flex;
+    /* Use Flexbox */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px !important;
+    /* Center items vertically */
+}
+
+.flex-container label {
+    margin-left: 8px;
+    /* Space between the radio button and the label */
+    cursor: pointer;
+    /* Pointer cursor for better UX */
+}
+
+
+.custom-input {
+    background-color: white;
+    /* Set the background color to white */
+    color: black;
+    /* Set the text color to black */
+    border: 1px solid #E8E8E9;
+    /* Optional: Add a border to the input */
+    padding: 8px 12px;
+    /* Optional: Add some padding for better appearance */
+    border-radius: 8px;
+    margin-bottom: 12px;
+    /* Optional: Add border-radius for rounded corners */
+}
+
+.button-container {
+    display: flex;
+    /* Enable flexbox */
+    justify-content: space-between;
+    /* Space the buttons apart */
+    align-items: center;
+    /* Center them vertically if needed */
+    /* Optional: Add some padding */
+}
+
+.cancel-button {
+    width: 76px;
+    height: 40px;
+    padding: 10px 14px 10px 14px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #86868A
+        /* Add space between the buttons */
+}
+
+.cancel-button:hover {
+    background-color: white !important;
+}
+
+.create-button {
+    width: 76px;
+    height: 40px;
+    padding: 10px 14px 10px 14px;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: #0DAC8A;
+    border: 1px solid #0DAC8A;
+    color: white;
+}
+
+.upload-text {
+    color: #0DAC8A;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.radio-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-input:checked+.radio-custom::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #0DAC8A;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-color: #0DAC8A !important;
+}
+
+.radio-input.newsletter+.radio-custom {
+    border-color: #A3A9B6;
+}
+
+.radio-input.newsletter:checked+.radio-custom {
+    background-color: #0DAC8A;
+    border-color: #0DAC8A;
+}
+
+.radio-input.newsletter:checked+.radio-custom::after {
+    background: white;
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,247 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cal{
+
+padding:1rem !important;
+}
+.modal-content-landing-page {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    /* width: 749px; Fixed width for desktop */
+    overflow: hidden; /* Prevent overflow */
+    max-height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    gap: 0px;
+    max-width: 550px;
+    margin: -20px auto;
+    padding: 15px;
+}
+
+/* Individual item style */
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.video-text{
+    width: 561px;
+  height: 25px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
+  color: #474745;
+  
+  }
+/* Media Queries */
+@media (max-width: 1200px) {
+    .modal-content-landing-page {
+        width: 90%; /* Use 90% of the viewport width for large tablets */
+        max-width: 600px; /* Set a maximum width */
+      
+  
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content-landing-page {
+        width: 95%; /* Use 95% of the viewport width for tablets */
+        max-width: 500px; /* Set a maximum width */
+        top: 30px; /* Adjust top position for smaller screens */
+      
+       
+
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content-landing-page {
+        width: 100%; /* Full width for mobile */
+        max-width: none; /* Remove maximum width */
+        padding: 16px; /* Reduce padding */
+      
+    }
+}
+
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.day-header {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* gap: 10px; */
+    /* Space between days */
+    /* margin: 20px 0; */
+    /* width: calc(100% - 20px); */
+    /* Adjust width to fit the modal */
+}
+
+.day {
+    display: flex;
+    /* Add this */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    padding: 15px;
+    /* Padding for better touch targets */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 100%;
+    /* Circular buttons */
+    transition: transform 0.2s;
+    /* Hover effect */
+    background-color: transparent;
+    /* Default background */
+    color: #333;
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    /* Add a semicolon */
+}
+
+.blank {
+    background-color: transparent;
+    /* No background color for blank days */
+}
+
+.day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+    /* Space between day names and calendar body */
+}
+
+
+.selected {
+    background-color: #0DAC8A;
+    /* Selected color */
+    color: white;
+    /* White text for readability */
+}
+
+.calendar-footer {
+    display: flex;
+    margin-top: 15px;
+}
+
+.cancel-button,
+.apply-button,
+.today-button,
+.arrow-button {
+    padding: 5px 12px;
+    /* Adjusted padding */
+    border: 1px;
+    border-radius: 10px;
+    /* Round buttons */
+    cursor: pointer;
+    transition: background 0.3s;
+    /* Smooth hover effect */
+}
+
+.today-button {
+    border-radius: 30px !important;
+    width: 75px;
+    height: 34px;
+}
+
+.arrow-button {
+    border-radius: 100% !important;
+    height: 32px;
+    width: 32px;
+    padding: 5px 0 0 2px;
+}
+
+.cancel-button {
+    background-color: #ffffff;
+    /* Red for cancel */
+    color: #86868A;
+    border: 1px solid #86868A;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}
+
+.apply-button {
+    background-color: #0DAC8A;
+    /* Green for apply */
+    color: white;
+    margin-left: 297px;
+}
+
+.apply-button:hover {
+    background-color: #009c68;
+    /* Darker green on hover */
+}
+
+.today-button,
+.arrow-button {
+    background-color: #e0e0e0;
+    /* Gray for utility buttons */
+}
+
+.today-button:hover,
+.arrow-button:hover {
+    background-color: #c8c8c8;
+    /* Darker gray on hover */
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .day {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .day {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+}

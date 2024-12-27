@@ -1,0 +1,178 @@
+.auth-card {
+  display: flex;
+  flex-direction: row;
+  @include depth(1);
+
+  .image-side {
+    width:100%;
+    background: url('/assets/img/login/auth-background.svg') no-repeat center
+      top;
+    background-size: cover;
+    padding: 80px 40px;
+    border-radius: 20px;
+
+    .h3 {
+      line-height: 0.8rem;
+    }
+  }
+
+  .form-flex {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+  
+  }
+.custom-form-control{
+  width: 400px;
+height: 40px;
+padding: 8px 12px 8px 12px;
+margin-top: 4px;
+border-radius: 8px 0px 0px 0px;
+border: 1px solid #E8E8E9
+}
+.signup-title{
+width: 91px;
+height: 32px;
+font-size: 24px;
+font-weight: 500;
+line-height: 32px;
+letter-spacing: 0.005em;
+text-align: left;
+color: #1A1C21;
+margin: 0 auto;
+  }
+.form-text-field{
+height: 20px;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0.005em;
+text-align: left;
+color: #667085;
+}
+
+.already-account{
+margin-top: 32px;
+margin-right: 8px;
+height: 20px;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.005em;
+color:#667085;
+
+  
+}
+.signup-heading{
+width: 400px;
+height: 22px;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.005em;
+margin: 0 auto;
+margin-top: 8px;
+color: #667085;
+  }
+  .form-side {
+    width: 728px;
+    // width: 60%;
+    padding: 80px;
+    margin-left: 32px;
+  }
+
+  @include respond-below(md) {
+    flex-direction: column;
+
+    .image-side {
+      width: 100%;
+      padding: 60px;
+    }
+
+    .form-side {
+      width: 100%;
+      padding: 60px;
+    }
+  }
+
+  @include respond-below(sm) {
+    p.h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include respond-below(xs) {
+    flex-direction: column;
+
+    .image-side {
+      padding: 35px 30px;
+    }
+
+    .form-side {
+      padding: 35px 30px;
+    }
+
+    .logo-single {
+      margin-bottom: 20px;
+    }
+
+    p.h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.rounded {
+  .card.auth-card {
+    border-top-left-radius: $border-radius-rounded + 0.5rem;
+    border-bottom-left-radius: $border-radius-rounded + 0.5rem;
+
+    @include respond-below(md) {
+      border-top-left-radius: $border-radius-rounded + 0.5rem;
+      border-top-right-radius: $border-radius-rounded + 0.5rem;
+      border-bottom-right-radius: $border-radius-rounded;
+      border-bottom-left-radius: $border-radius-rounded;
+    }
+  }
+
+  .auth-card .image-side {
+    border-top-left-radius: $border-radius-rounded;
+    border-bottom-left-radius: $border-radius-rounded;
+
+    @include respond-below(md) {
+      border-bottom-right-radius: initial;
+      border-bottom-left-radius: initial;
+      border-top-left-radius: $border-radius-rounded;
+      border-top-right-radius: $border-radius-rounded;
+    }
+
+    @include respond-below(sm) {
+    }
+
+    @include respond-below(xs) {
+    }
+  }
+}
+
+.rtl {
+  &.rounded {
+    .auth-card .image-side {
+      border-top-left-radius: $border-radius-rounded;
+      border-bottom-left-radius: $border-radius-rounded;
+    }
+
+    .card.auth-card {
+      border-top-left-radius: $border-radius-rounded;
+      border-bottom-left-radius: $border-radius-rounded;
+      border-top-right-radius: $border-radius-rounded + 0.5rem;
+      border-bottom-right-radius: $border-radius-rounded + 0.5rem;
+    }
+
+    .auth-card .image-side {
+      border-top-left-radius: initial;
+      border-bottom-left-radius: initial;
+      border-top-right-radius: 0.75rem;
+      border-bottom-right-radius: 0.75rem;
+    }
+  }
+}

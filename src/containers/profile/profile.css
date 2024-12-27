@@ -1,0 +1,62 @@
+.text-t1 {
+    color: #0D0D26;
+}
+
+.text-t2 {
+    color: #344054;
+}
+
+.text-t3 {
+    color: #475467;
+}
+
+.text-t4 {
+    color: #666571;
+}
+
+.form-inp-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.billing-heading {
+    color: #101828;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    right: 24px;
+    bottom: 20px;
+    left: 24px;
+}
+
+.b-btn {
+    border: 1px solid #E8E8E9;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.paymeny-card-w {
+    width: 50%;
+}
+
+@media screen and (max-width: 830px) {
+    .paymeny-card-w {
+        width: 100%;
+        padding: 0 !important;
+        margin-bottom: 5px;
+    }
+
+}
