@@ -20,7 +20,7 @@ const LandingModal = ({ isOpen, onClose, agencyId }) => { // Assuming agencyId i
   useEffect(() => {
     const checkLinkExists = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/affiliated-link/${orderId}`);
+        const response = await fetch(`http://3.76.225.188:5000/affiliated-link/${orderId}`);
         const { data } = await response.json();
         console.log({ data });
 
@@ -99,7 +99,7 @@ const LandingModal = ({ isOpen, onClose, agencyId }) => { // Assuming agencyId i
       }
 
       try {
-        const response = await fetch('http://localhost:5000/affiliated-link', {
+        const response = await fetch('http://3.76.225.188:5000/affiliated-link', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
