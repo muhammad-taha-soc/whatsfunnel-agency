@@ -163,17 +163,45 @@ const LandingModal = ({ isOpen, onClose, agencyId }) => { // Assuming agencyId i
                 ]}
               />
               <div className="text-muted text-one"></div>
-              <div className="video-text">
-                Please arrange an onboarding call. We look forward to seeing you!
+              <div className="video-text text-center">
+                <span
+                  style={{
+                    // display: 'block',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333',
+                    marginBottom: '2px',
+                  }}
+                >
+                  {`Link to affiliate registration : `}
+                </span>
+                <a href="https://copecart.com/accounts/sign_up?role=affiliate">
+                  https://copecart.com/accounts/sign_up?role=affiliate
+                </a>
               </div>
 
               <Card>
                 <CardBody className="cal">
                   <div style={{ marginTop: '10px' }}>
-                    <label htmlFor="affiliatedLink" style={{ display: 'block', fontSize: '14px', fontWeight: '600', color: '#333', marginBottom: '2px' }}>
-                      Enter Affiliated Link:
+                    <label
+                      htmlFor="affiliatedLink"
+                      style={{
+                        display: 'block',
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: '#333',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      Enter Affiliate-ID:
                     </label>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                      }}
+                    >
                       <input
                         type="url"
                         id="affiliatedLink"
@@ -189,8 +217,10 @@ const LandingModal = ({ isOpen, onClose, agencyId }) => { // Assuming agencyId i
                           outline: 'none',
                           transition: 'border-color 0.3s ease',
                         }}
-                        onFocus={(e) => e.target.style.borderColor = '#0DAC8A'}
-                        onBlur={(e) => e.target.style.borderColor = '#ccc'}
+                        onFocus={(e) =>
+                          (e.target.style.borderColor = '#0DAC8A')
+                        }
+                        onBlur={(e) => (e.target.style.borderColor = '#ccc')}
                       />
                       <button
                         onClick={handleSaveAffiliatedLink}
@@ -203,19 +233,35 @@ const LandingModal = ({ isOpen, onClose, agencyId }) => { // Assuming agencyId i
                           cursor: 'pointer',
                           transition: 'background-color 0.3s ease',
                         }}
-                        onMouseOver={(e) => e.target.style.backgroundColor = '#0a9d76'}
-                        onMouseOut={(e) => e.target.style.backgroundColor = '#0DAC8A'}
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = '#0a9d76')
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = '#0DAC8A')
+                        }
                       >
                         Save
                       </button>
                     </div>
                     {linkSaved && (
-                      <p style={{ color: 'green', fontSize: '14px', marginTop: '10px' }}>
+                      <p
+                        style={{
+                          color: 'green',
+                          fontSize: '14px',
+                          marginTop: '10px',
+                        }}
+                      >
                         Link saved successfully!
                       </p>
                     )}
                     {error && (
-                      <p style={{ color: 'red', fontSize: '14px', marginTop: '10px' }}>
+                      <p
+                        style={{
+                          color: 'red',
+                          fontSize: '14px',
+                          marginTop: '10px',
+                        }}
+                      >
                         {error}
                       </p>
                     )}
